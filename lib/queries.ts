@@ -14,6 +14,8 @@ export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{
 }`;
 
 export const homePageQuery = groq`*[_type == "homePage"][0]{
+  _id,
+  _rev,
   sections[]{ ... }
 }`;
 

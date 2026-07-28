@@ -156,6 +156,8 @@ export type PageSection =
   | ContactSectionData;
 
 export interface HomePage {
+  _id?: string;
+  _rev?: string;
   sections?: PageSection[];
 }
 
