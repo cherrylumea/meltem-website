@@ -94,6 +94,25 @@ export default async function Home() {
 
   return (
     <main id="main">
+      <pre
+        style={{
+          background: "#ffe4e1",
+          color: "#000",
+          padding: "16px",
+          fontSize: "12px",
+          whiteSpace: "pre-wrap",
+          wordBreak: "break-all",
+          border: "4px solid red",
+        }}
+      >
+        DEBUG projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+        {"\n"}dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+        {"\n"}pageData._id={pageData?._id}
+        {"\n"}pageData._rev={pageData?._rev}
+        {"\n"}sections.length={sections.length}
+        {"\n"}types={JSON.stringify(sections.map((s) => s._type))}
+        {"\n"}keys={JSON.stringify(sections.map((s) => s._key))}
+      </pre>
       {sections.map((section, index) =>
         renderSection(section, section._key ?? `${section._type}-${index}`)
       )}
