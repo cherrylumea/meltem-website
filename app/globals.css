@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --background: #FDFBF7;
+  --foreground: #2D2D2D;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
