@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{
+export const siteSettingsQuery = groq`*[_id == "siteSettings"][0]{
   logoName,
   logoTitle,
   navLinks[]{ _key, label, href },
@@ -13,7 +13,7 @@ export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{
   footerText
 }`;
 
-export const homePageQuery = groq`*[_type == "homePage"][0]{
+export const homePageQuery = groq`*[_id == "homePage"][0]{
   _id,
   _rev,
   sections[]{ ... }
